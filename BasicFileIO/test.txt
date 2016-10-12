@@ -1,0 +1,7 @@
+<<<<<<< HEAD
+Dago
+32
+=======
+Dago
+32
+>>>>>>> origin/master

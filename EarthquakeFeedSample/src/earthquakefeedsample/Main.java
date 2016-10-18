@@ -75,7 +75,7 @@ public class Main {
                     qdate = sdformat.parse(dt);
                     
                     String[] locationPair = point.split(" ");
-                    String location = "Lat " + locationPair[0] + " Lng " + locationPair[1];
+                    String location = "Lat: " + locationPair[0] + " Lng: " + locationPair[1];
                     
                    String magnitudeString = details.split(" ")[1];
                    double magnitude = Double.parseDouble(magnitudeString);

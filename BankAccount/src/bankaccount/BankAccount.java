@@ -27,6 +27,23 @@ public class BankAccount {
         client.withdraw(900);    
         
         
+        VipCostumer select = new VipCostumer();
+        System.out.println("\nName: " + select.getName() + 
+                "\nCredit Limit: " + select.getCredit() + 
+                "\nEmail: " +select.getEmail());
+        System.out.println("==============================================");
+        
+        VipCostumer select2 = new VipCostumer("Abraham","correo@correo.com");
+        System.out.println("Name: " + select2.getName() + 
+                "\nCredit Limit: " + select2.getCredit() + 
+                "\nEmail: " +select2.getEmail());
+        System.out.println("==============================================");
+        
+        VipCostumer select3 = new VipCostumer("Magy",20000,"magy@correo.com");
+        System.out.println("Name: " + select3.getName() + 
+                "\nCredit Limit: " + select3.getCredit() + 
+                "\nEmail: " +select3.getEmail());
+        System.out.println("==============================================");
         
     }
     

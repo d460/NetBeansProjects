@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+        "http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
     <class name= "hibernate.Contacto" table = "CONTACTOS">
@@ -9,7 +9,7 @@
             <generator class = "identity" />
         </id> 
         <properties name = "nombre" type = "string" column = "NOMBRE" />
-        <properties name = "email" />
-        <properties name = "telefono" />
+        <properties name = "email" type = "string" column = "EMAIL"/>
+        <properties name = "telefono" type = "string" column = "TELEFONO" />
     </class>
 </hibernate-mapping>

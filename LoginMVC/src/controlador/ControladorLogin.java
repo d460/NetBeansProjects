@@ -5,6 +5,7 @@ import modelo.Empleado;
 import modelo.EmpleadoDAO;
 import vista.JFLogin;
 import javax.swing.JOptionPane;
+import vista.JFGerente;
 
 public class ControladorLogin implements ActionListener {
 
@@ -33,6 +34,13 @@ public class ControladorLogin implements ActionListener {
             JOptionPane.showMessageDialog(vistaLogin,"Empleado con datos ingresados no encontrado");
         }else {
             JOptionPane.showMessageDialog(vistaLogin,"Datos Correctos");
+            JFGerente vistaG = new JFGerente();
+            vistaG.lblBienvenida.setText("Bienvenido " +empleado.getNombres());
+            ControladorGerente controladorG = new ControladorGerente(vistaG, modeloLogin);
+            controladorG.InicializaGerente(dni, pass, privilegio);
+            vistaG.setVisible(true);
+            vistaG.setLocationRelativeTo(null);
+            vistaLogin.setVisible(false);
         }  
     }
 }

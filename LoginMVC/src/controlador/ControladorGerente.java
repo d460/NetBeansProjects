@@ -2,6 +2,7 @@
 package controlador;
 
 import java.awt.event.*;
+import javax.swing.JOptionPane;
 import modelo.Empleado;
 import modelo.EmpleadoDAO;
 import vista.JFGerente;
@@ -26,7 +27,11 @@ public class ControladorGerente implements ActionListener{
         this.privilegio = privilegio;
     }
     
-    public void ActionPerformed (ActionEvent e){
+    public void actionPerformed (ActionEvent e){
+        empleado = modeloGerente.verificaPreparedStatement(dni, pass, privilegio);
+        JOptionPane.showMessageDialog(vistaGerente, "Datos de usuario gerente\n"
+                + "Apellidos y Nombre: " +empleado.getApellidos()+" " +empleado.getNombres()+
+                "\nPrivilegio: " +empleado.getPrivilegios()+"");
         
     }
     

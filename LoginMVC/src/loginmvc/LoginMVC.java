@@ -5,6 +5,10 @@
  */
 package loginmvc;
 
+import controlador.ControladorLogin;
+import modelo.EmpleadoDAO;
+import vista.JFLogin;
+
 /**
  *
  * @author Dagoberto
@@ -16,6 +20,12 @@ public class LoginMVC {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        JFLogin vistaL = new JFLogin();
+        EmpleadoDAO modeloL = new EmpleadoDAO();
+        ControladorLogin controladorL = new ControladorLogin(vistaL,modeloL);
+        vistaL.setVisible(true);
+        vistaL.setLocationRelativeTo(null);
+        
     }
     
 }
